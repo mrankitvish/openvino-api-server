@@ -2,3 +2,4 @@ fastapi
 uvicorn
 openvino
 openai
+openvino-genai
