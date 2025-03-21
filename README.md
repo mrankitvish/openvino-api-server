@@ -5,7 +5,7 @@ This is an OpenAI compatible API server that uses OpenVINO for inference.
 ## Endpoints
 
 *   `/v1/chat/completions`: This endpoint is used to create chat completions.
-*   `/model`: This endpoint is used to list the available models.
+*   `/v1/models`: This endpoint is used to list the available models.
 *   `/health`: This endpoint is used to check the health of the API.
 
 ## Usage

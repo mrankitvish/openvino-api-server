@@ -14,6 +14,7 @@ from fastapi import status
 
 model_dir = "./models"
 device = "CPU"
+max_tokens = 128
 
 def validate_model_path(model_dir):
     """Validate that the model directory exists and contains required files."""
@@ -71,7 +72,7 @@ class ChatCompletionRequest(BaseModel):
     top_p: Optional[float] = 1.0
     n: Optional[int] = 1
     stream: Optional[bool] = False
-    max_tokens: Optional[int] = 900
+    max_tokens: Optional[int] = 128
     presence_penalty: Optional[float] = 0.0
     frequency_penalty: Optional[float] = 0.0
     stop: Optional[Union[str, List[str]]] = None
@@ -276,7 +277,7 @@ class Model(BaseModel):
     owned_by: str
     permission: List[Dict[str, Any]]
 
-@app.get("/model")
+@app.get("/v1/models")
 async def list_models():
     """
     Lists the currently available models.

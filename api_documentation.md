@@ -123,7 +123,7 @@ This endpoint is used to create chat completions.
   }
 }
 
-## /model
+## /v1/models
 
 This endpoint is used to list the available models.
 
